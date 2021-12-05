@@ -6,12 +6,14 @@ import { BookComponent } from './book.component';
 
 import { BookFilterPipe } from './book-filter/book-filter.pipe';
 import { BookTitleComponent } from './book-title/book-title.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
 
 @NgModule({
   declarations: [
     BookComponent,
     BookFilterPipe,
     BookTitleComponent,
+    BookDetailComponent,
   ],
   imports: [
     CommonModule,

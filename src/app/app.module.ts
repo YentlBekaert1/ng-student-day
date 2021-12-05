@@ -9,6 +9,8 @@ import { BooksModule } from './books/books.module';
 import { AboutModule } from './about/about.module';
 import { NavigationComponent } from './navigation/navigation.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     BrowserModule,
     AppRoutingModule,
     BooksModule,
-    AboutModule
+    AboutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

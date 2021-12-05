@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from './book';
 import { BookApiService } from './book-api.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-book',
@@ -8,12 +9,12 @@ import { BookApiService } from './book-api.service';
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent implements OnInit {
-  
+
   searchTerm : string = "";
-  books : Book[];
+  books$: Observable<Book[]>;
 
   constructor(private bookApi: BookApiService) {
-    this.books = this.bookApi.getAll();
+     this.books$ = this.bookApi.getAll();
    }
 
   ngOnInit(): void {

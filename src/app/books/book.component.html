@@ -1,2 +1,2 @@
 <input class="book-filter" type = "search" placeholder="search" (input)="onSearch($event)">
-<app-book-title [content] = book (detailClicked)="goToBookDetails($event)" *ngFor="let book of books | bookFilter: searchTerm"></app-book-title>
+<app-book-title [content] = book (detailClicked)="goToBookDetails($event)" *ngFor="let book of books$ | async | bookFilter: searchTerm"></app-book-title>
